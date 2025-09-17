@@ -1,0 +1,157 @@
+@import "mocha.css";
+
+* {
+    min-height: 0;
+    font-family: "Mononoki Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+/* Waybar */
+#waybar {
+	background-color: transparent;
+	border-radius: 10px;
+}
+
+#waybar .module {
+    color: @text;
+    padding: 0px 0px;
+    /* padding-left: 4px; */
+    margin: -8px 20px -8px;
+    /* border: 2px; */
+}
+
+#waybar .module:hover {
+    color: @mauve;
+
+}
+
+#window#waybar {
+    color: @text;
+    background-color: @base;
+    transition-property:  background-color;
+    transition-duration: 0.5s;
+    border: 2px solid @mauve;
+}
+
+button {
+    box-shadow: inset 0 -3px transparent;
+    border: none;
+    border-radius: 2px;
+    padding: 0px 0px;
+    margin: 5px 0px;
+}
+
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px transparent;
+}
+
+#workspaces button {
+    box-shadow: none;
+    text-shadow: none;
+    padding: 0px;
+    border-radius: 8px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 3px;
+    padding-right: 3px;
+    color: @text;
+    animation: ws_normal 20s ease-in-out 1;
+}
+
+#workspaces button.active {
+    background: @mauve;
+    color: @crust;
+    border-radius: 6px;
+    margin-left: 0px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-right: 0px;
+    animation: ws_active 20s ease-in-out 1;
+    transition: all 0.4s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#workspaces button:hover {
+    background: @mantle;
+    color: @text;
+    animation: ws_hover 20s ease-in-out 1;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#tags button {
+    color: @mauve;
+    background: @base;
+    border-radius: 0px;
+    padding: 0px 0px;
+    margin: 0px 0px;
+}
+
+#tags button.occupied {
+    color: @mantle;
+}
+
+#tags button.focused {
+    color: @sky;
+}
+
+#tags button.urgent {
+    color: @red;
+}
+
+#clock {
+    font-size: 20px;
+}
+
+#custom-notification {
+    color: @text;
+}
+
+#group-4 {
+   margin: 2px;
+}
+
+#group-10,
+#group-9,
+#group-8,
+#group-7,
+#group-6,
+#group-5,
+#group-4,
+#group-3,
+#group-2,
+#group-1 {
+	padding: 0em 0.2em;
+	border-radius: 12px;
+	background: @mantle-transparent; /* linear-gradient(145deg, #1e1e2e 0%, #181825 100%); */
+	border: 2px;
+}
+
+#custom-discord,
+#custom-reddit,
+#custom-instagram,
+#catppuccin-theme,
+#custom-whatsapp,
+#custom-firefox,
+#custom-spotify,
+#custom-github {
+  border: 2px;
+  font-size: 25px;
+}
+
+#custom-next, #custom-pause, #custom-previous {
+  font-size: 25px;
+}
+
+#network.disconnected,
+#pulseaudio.muted,
+#wireplumber.muted {
+    color: @red;
+}
+
+label:focus {
+    background-color: @base;
+}
+
